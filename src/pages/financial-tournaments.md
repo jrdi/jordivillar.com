@@ -1,9 +1,9 @@
 ---
-layout: "../layouts/BlogPost.astro"
+layout: "../layouts/Post.astro"
 title: "How I Made $350k in Financial Tournaments"
 subtitle: "Pursuing a non-conventional path"
 description: "Between 2015 and 2020 I have participated in Quantopian and Numerai tournaments. Being involved in these tournaments has led me to a very profitable journey: I made around $350k during these years."
-pubDate: "Oct 19, 2020"
+pubDate: "Oct 19, 2020 16:00:00"
 ---
 
 Between 2015 and 2020 I have participated in [Quantopian](https://quantopian.com) and [Numerai](https://numer.ai) tournaments. Being involved in these tournaments has led me to a very profitable journey: I made around $350k during these years.

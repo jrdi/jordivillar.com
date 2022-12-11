@@ -1,23 +1,28 @@
 ---
 export interface Props {
+	isHome?: boolean;
 	title: string;
 	description: string;
+	keywords?: string;
 	image?: string;
 }
 
-const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
+const { isHome, title, description, keywords, image = '/placeholder-social.jpg' } = Astro.props;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" href="/favicon.ico" />
+<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+<link rel="alternate" type="application/rss+xml" title={`jordivillar.com`} href="/rss.xml" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Primary Meta Tags -->
-<title>{title} &ndash; Jordi Villar</title>
+<title>{ isHome ? `Jordi Villar – ${title}` : `${title} – Jordi Villar`}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+{keywords && <meta name="keywords" content={keywords} />}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
