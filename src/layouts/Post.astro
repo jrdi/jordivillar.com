@@ -25,22 +25,11 @@ const {
 		<BaseHead title={title} description={description} />
 	</head>
 
-	<body>
+	<body class="max-w-3xl">
 		<Header />
-		<main class="mb-20 mt-10">
+		<main class="mb-10 mt-10">
 			<div class="w-full">
 				<article>
-					{pubDate &&
-						<div class="text-gray-400 text-right">
-							<time datetime={pubDate}>
-								{new Date(pubDate).toLocaleDateString('en-us', {
-									year: 'numeric',
-									month: 'short',
-									day: 'numeric',
-								})}
-							</time>
-						</div>
-					}
 					<h1>
 						{title}
 					</h1>
@@ -50,6 +39,19 @@ const {
 						</h3>
 					}
 					<slot />
+					{pubDate &&
+						<div class="mt-12 text-gray-500">
+							<time datetime={pubDate}>
+								{new Date(pubDate).toLocaleDateString('en-us', {
+									year: 'numeric',
+									month: 'long',
+									day: 'numeric',
+								})}
+							</time>
+							&ndash;
+							<a href="https://twitter.com/jrdi">@jrdi</a>
+						</div>
+					}
 				</article>
 			</div>
 		</main>
