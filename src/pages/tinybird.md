@@ -17,7 +17,7 @@ I'm not going to lie, the bar is set high and everyone excels at their job, whic
 
 Another aspect of the culture that I've appreciated is the focus on continuous learning and growth. At Tinybird, we are encouraged to take on new challenges, whether that means learning a new technology or taking on a leadership role. Also, on the technical side we are pushed to dig into the details, and to invest considerable time to understand how things work. Even if there is no clear immediate return, the idea is to progressively increase the collective knowledge as much as possible.
 
-The company also values transparency, and everyone has access to key metrics and data that helps us understand how the business and clients are performing.
+Transparency is also valued at the company, and everyone has access to key metrics and data that helps us understand the performance of the business and clients.
 
 #### Client-Facing Role
 
