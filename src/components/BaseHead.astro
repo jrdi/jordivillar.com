@@ -41,3 +41,6 @@ const { isHome, title, description, keywords, image = '/placeholder-social.jpg' 
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Tinybird -->
+<script defer src="https://unpkg.com/@tinybirdco/flock.js" data-token={ import.meta.env.TRACKER_TOKEN } />
