@@ -10,7 +10,4 @@ export default defineConfig({
   trailingSlash: 'never',
 	site: 'https://jordivillar.com',
   integrations: [tailwind(), mdx(), sitemap()],
-  build: {
-    format: 'file'
-  }
 });

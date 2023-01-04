@@ -3,7 +3,7 @@ import sanitizeHtml from 'sanitize-html';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 // Works with Markdown files only!
-const postImportResult = import.meta.glob('./**/[^index|about|404]*.{md,mdx}', { eager: true });
+const postImportResult = import.meta.glob('./**/*.{md,mdx}', { eager: true });
 const posts = Object.values(postImportResult);
 
 export const get = () =>
@@ -11,10 +11,12 @@ export const get = () =>
 		title: SITE_TITLE,
 		description: SITE_DESCRIPTION,
 		site: import.meta.env.SITE,
-		items: posts.map((post) => ({
-			link: post.url,
-			title: post.frontmatter.title,
-			pubDate: post.frontmatter.pubDate,
-			content: sanitizeHtml(post.compiledContent()),
-		}))
+		items: posts
+			.filter(post => post.frontmatter.layout === '../layouts/Post.astro')
+			.map((post) => ({
+				link: post.url,
+				title: post.frontmatter.title,
+				pubDate: post.frontmatter.pubDate,
+				content: sanitizeHtml(post.compiledContent()),
+			}))
 	});
