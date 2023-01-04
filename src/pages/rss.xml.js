@@ -3,7 +3,7 @@ import sanitizeHtml from 'sanitize-html';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 // Works with Markdown files only!
-const postImportResult = import.meta.glob('./**/[^index|about]*.{md,mdx}', { eager: true });
+const postImportResult = import.meta.glob('./**/[^index|about|404]*.{md,mdx}', { eager: true });
 const posts = Object.values(postImportResult);
 
 export const get = () =>
